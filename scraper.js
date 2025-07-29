@@ -511,11 +511,11 @@ class WebScraper {
             const emailSelector = 'input[name="email"], input[type="email"]';
             const passwordSelector = 'input[name="password"], input[type="password"]';
             
-            const email = process.env.LATINAMERICA_CUPID_EMAIL;
-            const password = process.env.LATINAMERICA_CUPID_PASSWORD;
+            const email = process.env.BRAZIL_CUPID_EMAIL;
+            const password = process.env.BRAZIL_CUPID_PASSWORD;
             
             if (!email || !password) {
-                throw new Error('LATINAMERICA_CUPID_EMAIL and LATINAMERICA_CUPID_PASSWORD environment variables are required');
+                throw new Error('BRAZIL_CUPID_EMAIL and BRAZIL_CUPID_PASSWORD environment variables are required');
             }
             
             // Simulate human typing with very fast delays
@@ -629,11 +629,11 @@ class WebScraper {
                         const emailSelector = 'input[name="email"], input[type="email"]';
                         const passwordSelector = 'input[name="password"], input[type="password"]';
                         
-                        const email = process.env.LATINAMERICA_CUPID_EMAIL;
-                        const password = process.env.LATINAMERICA_CUPID_PASSWORD;
+                        const email = process.env.BRAZIL_CUPID_EMAIL;
+                        const password = process.env.BRAZIL_CUPID_PASSWORD;
                         
                         if (!email || !password) {
-                            throw new Error('LATINAMERICA_CUPID_EMAIL and LATINAMERICA_CUPID_PASSWORD environment variables are required');
+                            throw new Error('BRAZIL_CUPID_EMAIL and BRAZIL_CUPID_PASSWORD environment variables are required');
                         }
                         
                         try {
