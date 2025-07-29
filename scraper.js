@@ -485,10 +485,10 @@ class WebScraper {
         }
     }
 
-    // BrazilCupid specific workflow following instructions.md
-    async runBrazilCupidWorkflow() {
+    // LatinAmericaCupid specific workflow following instructions.md
+    async runLatinAmericaCupidWorkflow() {
         try {
-            console.log('Starting BrazilCupid workflow...');
+            console.log('Starting LatinAmericaCupid workflow...');
             
             // Step 1: Navigate to login page
             console.log('Step 1: Navigating to login page...');
@@ -511,11 +511,11 @@ class WebScraper {
             const emailSelector = 'input[name="email"], input[type="email"]';
             const passwordSelector = 'input[name="password"], input[type="password"]';
             
-            const email = process.env.BRAZIL_CUPID_EMAIL;
-            const password = process.env.BRAZIL_CUPID_PASSWORD;
+            const email = process.env.LATINAMERICA_CUPID_EMAIL;
+            const password = process.env.LATINAMERICA_CUPID_PASSWORD;
             
             if (!email || !password) {
-                throw new Error('BRAZIL_CUPID_EMAIL and BRAZIL_CUPID_PASSWORD environment variables are required');
+                throw new Error('LATINAMERICA_CUPID_EMAIL and LATINAMERICA_CUPID_PASSWORD environment variables are required');
             }
             
             // Simulate human typing with very fast delays
@@ -629,11 +629,11 @@ class WebScraper {
                         const emailSelector = 'input[name="email"], input[type="email"]';
                         const passwordSelector = 'input[name="password"], input[type="password"]';
                         
-                        const email = process.env.BRAZIL_CUPID_EMAIL;
-                        const password = process.env.BRAZIL_CUPID_PASSWORD;
+                        const email = process.env.LATINAMERICA_CUPID_EMAIL;
+                        const password = process.env.LATINAMERICA_CUPID_PASSWORD;
                         
                         if (!email || !password) {
-                            throw new Error('BRAZIL_CUPID_EMAIL and BRAZIL_CUPID_PASSWORD environment variables are required');
+                            throw new Error('LATINAMERICA_CUPID_EMAIL and LATINAMERICA_CUPID_PASSWORD environment variables are required');
                         }
                         
                         try {
@@ -765,7 +765,7 @@ class WebScraper {
             
             
         } catch (error) {
-            console.error('Error in BrazilCupid workflow:', error);
+            console.error('Error in LatinAmericaCupid workflow:', error);
             throw error;
         }
     }
@@ -792,15 +792,15 @@ async function example() {
     }
 }
 
-// BrazilCupid workflow function following instructions.md
-async function runBrazilCupidFlow() {
+// LatinAmericaCupid workflow function following instructions.md
+async function runLatinAmericaCupidFlow() {
     const scraper = new WebScraper();
     
     try {
         console.log('Initializing browser with Spanish locale...');
         await scraper.init();
         
-        await scraper.runBrazilCupidWorkflow();
+        await scraper.runLatinAmericaCupidWorkflow();
         
         await scraper.close();
         
@@ -813,6 +813,6 @@ async function runBrazilCupidFlow() {
 module.exports = WebScraper;
 
 if (require.main === module) {
-    // Run BrazilCupid workflow by default
-    runBrazilCupidFlow();
+    // Run LatinAmericaCupid workflow by default
+    runLatinAmericaCupidFlow();
 }
